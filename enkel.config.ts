@@ -8,7 +8,7 @@ const config: Config = {
   },
   env: "DEV",
   dev: {
-    port: env("PORT", 4000),
+    port: env("PORT", 4001),
   },
   prod: {
     port: env("PORT", 5001),

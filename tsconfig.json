@@ -4,5 +4,7 @@
     "outDir": "dist",
     "esModuleInterop": true,
     "resolveJsonModule": true
-  }
+  },
+  "include": ["**/*"],
+  "exclude": ["node_modules"]
 }
