@@ -1,24 +1,4 @@
-import { config } from "dotenv";
-import { serverLog } from "../engine/utils/log";
-
-initConfig();
-
-function initConfig() {
-  config();
-  if (process.env.NODE_ENV === "development") {
-    const envPath = `../.env.${process.env.NODE_ENV}`;
-
-    serverLog(`Current envoirnment -> development`, "blue");
-
-    console.log(`Current envoirnment -> development`);
-    console.log(`Using env file -> .env.development`);
-
-    config({ path: envPath });
-  } else {
-    console.log(`Current envoirnment -> production`);
-    console.log(`Using env file -> .env`);
-  }
-}
+import { initConfig } from "../engine/utils/init-env-config";
 
 /**
  * Retrieves the value of an environment variable.
@@ -34,9 +14,12 @@ function initConfig() {
  * const port = env("PORT", 8080);
  * console.log(port); // Output: 3000
  */
+
+export const ENVIORNMENT: "DEV" | "PROD" = "DEV";
 export function env(
   key: string,
   alternateValue: string | number
 ): string | number {
+  initConfig(ENVIORNMENT);
   return process.env[key] || alternateValue;
 }

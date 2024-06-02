@@ -1,4 +1,4 @@
-import { env } from "./utils/env";
+import { ENVIORNMENT, env } from "./utils/env";
 import { Config } from "./engine/types";
 
 const config: Config = {
@@ -6,12 +6,12 @@ const config: Config = {
     show: true,
     url: "_routes_",
   },
-  env: "DEV",
+  env: ENVIORNMENT,
   dev: {
-    port: env("PORT", 4001),
+    port: env("PORT", 4000),
   },
   prod: {
-    port: env("PORT", 5001),
+    port: env("PORT", 5000),
   },
 };
 

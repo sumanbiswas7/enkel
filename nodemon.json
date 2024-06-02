@@ -1,0 +1,6 @@
+{
+  "ignore": ["node_modules"],
+  "ext": "ts,json,graphql,env",
+  "exec": "etsc && node ./dist/app.js",
+  "legacyWatch": true
+}
