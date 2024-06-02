@@ -1,0 +1,26 @@
+{
+  "name": "enkel",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "chalk": "^5.3.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.13.0",
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.4.5"
+  }
+}

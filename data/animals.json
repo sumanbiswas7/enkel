@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "name": "Lion",
+    "class": "Mammal",
+    "diet": "Carnivore",
+    "habitat": "Savannas and grasslands"
+  },
+  {
+    "id": 2,
+    "name": "Elephant",
+    "class": "Mammal",
+    "diet": "Herbivore",
+    "habitat": "Savannas, forests, and deserts"
+  },
+  {
+    "id": 3,
+    "name": "Gorilla",
+    "class": "Mammal",
+    "diet": "Herbivore",
+    "habitat": "Forests"
+  },
+  {
+    "id": 4,
+    "name": "Tiger",
+    "class": "Mammal",
+    "diet": "Carnivore",
+    "habitat": "Forests, grasslands, and swamps"
+  },
+  {
+    "id": 5,
+    "name": "Kangaroo",
+    "class": "Mammal",
+    "diet": "Herbivore",
+    "habitat": "Savannas and grasslands"
+  }
+]
