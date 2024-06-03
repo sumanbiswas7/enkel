@@ -6,8 +6,10 @@ export interface Config {
   env: "DEV" | "PROD";
   dev: {
     port: string | number;
+    endpointLog: boolean;
   };
   prod: {
     port: string | number;
+    endpointLog: boolean;
   };
 }

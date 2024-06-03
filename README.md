@@ -3,8 +3,10 @@
 - File based routing
 - Hot Reload, Fast Compiler, TypeScript
 - Route list
+- Structured Response class
+- Log Endpoints
 
 ### Plans
 
-- Structured Response class
 - Time with every response
+- Save logs

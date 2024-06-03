@@ -9,9 +9,11 @@ const config: Config = {
   env: ENVIORNMENT,
   dev: {
     port: env("PORT", 4000),
+    endpointLog: true,
   },
   prod: {
     port: env("PORT", 5000),
+    endpointLog: true,
   },
 };
 
