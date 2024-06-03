@@ -6,6 +6,7 @@ import path from "path";
 import fs from "fs";
 
 export function interceptResponseJson(req, res: any, next) {
+  const startTime = Date.now();
   const originalJson = res.json;
 
   // LOG ENDPOINT HITS
@@ -26,6 +27,8 @@ export function interceptResponseJson(req, res: any, next) {
 
   // Override the json function
   res.json = function (body) {
+    const responseTime = Date.now() - startTime;
+
     if (body.isError === true) {
       const data = body.data || null;
       const message = body.message || undefined;
@@ -49,7 +52,16 @@ export function interceptResponseJson(req, res: any, next) {
       const success = res.statusCode >= 200 && res.statusCode < 300;
       const status = res.statusCode;
 
-      const ModifybodyJson = new APIResponse(success, data, status, message);
+      const ModifybodyJson = enkelConfig.dev.resTime
+        ? new APIResponse(
+            success,
+            data,
+            status,
+            message,
+            responseTime.toString() + "ms"
+          )
+        : new APIResponse(success, data, status, message);
+
       originalJson.call(this, ModifybodyJson);
     }
   };

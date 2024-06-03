@@ -11,11 +11,13 @@ const config: Config = {
     port: env("PORT", 4000),
     endpointLog: true,
     saveLogs: true,
+    resTime: true,
   },
   prod: {
     port: env("PORT", 5000),
     endpointLog: true,
     saveLogs: true,
+    resTime: true,
   },
 };
 

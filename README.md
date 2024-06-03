@@ -6,7 +6,6 @@
 - Structured Response class
 - Log Endpoints
 - Save logs
+- Time with every response
 
 ### Plans
-
-- Time with every response

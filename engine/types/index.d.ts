@@ -8,10 +8,12 @@ export interface Config {
     port: string | number;
     endpointLog: boolean;
     saveLogs: boolean;
+    resTime: boolean;
   };
   prod: {
     port: string | number;
     endpointLog: boolean;
     saveLogs: boolean;
+    resTime: boolean;
   };
 }
