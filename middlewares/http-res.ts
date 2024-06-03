@@ -34,6 +34,15 @@ export function interceptResponseJson(req, res: any, next) {
 
       const ModifybodyJson = new APIResponse(success, data, status, message);
       originalJson.call(this, ModifybodyJson);
+    } else if (req.url.includes(enkelConfig.routeMap.url)) {
+      const data = body.data || body;
+
+      const responseData = {
+        status: "OK",
+        endpoint_count: data.length,
+        routes: data,
+      };
+      originalJson.call(this, responseData);
     } else {
       const data = body.data || body;
       const message = body.message || undefined;
