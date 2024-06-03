@@ -47,12 +47,6 @@ export default function generateRoutes(app: Express) {
       controller: relativePath,
     };
 
-    console.log("-----------");
-    console.log("cont", controller);
-    console.log("route", routePath);
-    console.log("file", file);
-    console.log("-----------");
-
     routes.push(newRouteObj);
   });
 

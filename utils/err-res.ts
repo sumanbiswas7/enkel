@@ -1,5 +1,8 @@
+import clc from "cli-color";
+
 export function errRes(error: any) {
-  console.error("⚠️ " + error);
+  console.log(clc.red(error));
+  console.log(error);
 
   const data = error.data || null;
   const message = error.message || "Internal Server Error";
