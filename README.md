@@ -1,3 +1,7 @@
+# Enkel
+
+Designed to streamline and enhance your development process. By automating key tasks and providing intuitive tools, Enkel helps you focus on building great applications without the usual headaches. Embrace a smoother, more efficient workflow and experience the ease of development with Enkel.
+
 ### Feature List
 
 - File-based Routing: Automatically generate routes based on the file structure in the controllers directory.
